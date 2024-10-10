@@ -1,6 +1,3 @@
-interface ClassName {
-  className: string;
-}
 
 export const Logo = () => {
   return (

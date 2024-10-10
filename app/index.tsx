@@ -8,7 +8,7 @@ import Join from "./components/Join";
 
 export const LandingPage = () => {
   return (
-    <main>
+    <main className="flex flex-col gap-12">
       <Hero />
       <Invest />
       <Asset />

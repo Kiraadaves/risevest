@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa6";
 import { Logo } from "./svg";
+import useMediaQuery from "./helpers/useMediaQuery";
 
 const navigation = [
   { id: 0, name: "Home", href: "#" },
@@ -32,17 +33,7 @@ const NavLink = ({ item }: { item: (typeof navigation)[0] }) => (
 
 const Nav = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const [isMdScreen, setIsMdScreen] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    setIsMdScreen(mediaQuery.matches);
-
-    const handler = (e: MediaQueryListEvent) => setIsMdScreen(e.matches);
-    mediaQuery.addEventListener("change", handler);
-
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, []);
+  const isMdScreen = useMediaQuery();
 
   return (
     <header className="flex justify-between">
