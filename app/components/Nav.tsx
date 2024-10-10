@@ -6,7 +6,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa6";
 import { Logo } from "./svg";
-import useMediaQuery from "./helpers/useMediaQuery";
 
 const navigation = [
   { id: 0, name: "Home", href: "#" },
@@ -33,31 +32,29 @@ const NavLink = ({ item }: { item: (typeof navigation)[0] }) => (
 
 const Nav = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  const isMdScreen = useMediaQuery();
 
   return (
     <header className="flex justify-between md:px-24 px-6">
       <div className="animate__animated animate__slideInLeft">
         <Logo />
       </div>
-      <nav>
-        {isMdScreen ? (
-          <div>
-            <button
-              onClick={() => setMobileNavOpen(true)}
-              className="text-[#2D2D2D]"
-            >
-              <GiHamburgerMenu className="w-8 h-8" />
-            </button>
-          </div>
-        ) : (
-          <div className="hidden md:flex gap-6 items-center animate__animated animate__slideInRight">
-            {navigation.map((item) => (
-              <NavLink key={item.id} item={item} />
-            ))}
-          </div>
-        )}
-        {mobileNavOpen && isMdScreen && (
+      <nav className="animate__animated animate__slideInRight">
+        <div className="md:hidden">
+          <button
+            onClick={() => setMobileNavOpen(true)}
+            className="text-[#2D2D2D]"
+          >
+            <GiHamburgerMenu className="w-8 h-8" />
+          </button>
+        </div>
+
+        <div className="hidden md:flex gap-6 items-center ">
+          {navigation.map((item) => (
+            <NavLink key={item.id} item={item} />
+          ))}
+        </div>
+
+        {mobileNavOpen && (
           <div className="animate__animated animate__slideInRight fixed top-0 right-0 w-64 h-auto max-h-[80vh] bg-white shadow-lg z-50 overflow-y-auto">
             <div className="flex justify-end p-4">
               <button

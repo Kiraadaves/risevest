@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import useMediaQuery from "./helpers/useMediaQuery";
 import { useEffect, useState } from "react";
 import "animate.css";
 
@@ -12,7 +11,6 @@ interface FeedbackItem {
 }
 
 interface FeedbackCardProps {
-  isMdScreen: boolean;
   item: FeedbackItem;
 }
 
@@ -41,87 +39,72 @@ const feedback: FeedbackItem[] = [
 ];
 
 const Feedback = () => {
-  const isMdScreen = useMediaQuery();
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [animationClass, setAnimationClass] = useState("animate__fadeIn");
 
   useEffect(() => {
     const timer = setInterval(() => {
-      if (isMdScreen) {
-        setAnimationClass("animate__slideOutLeft");
-        setTimeout(() => {
-          setCurrentCardIndex((prevIndex) => (prevIndex + 1) % feedback.length);
-          setAnimationClass("animate__slideInRight");
-        }, 500);
-      } else {
-        setAnimationClass("animate__slideOutLeft");
-        setTimeout(() => {
-          setAnimationClass("animate__slideInRight");
-        }, 500);
-      }
+      setAnimationClass("animate__slideOutLeft");
+      setTimeout(() => {
+        setCurrentCardIndex((prevIndex) => (prevIndex + 1) % feedback.length);
+        setAnimationClass("animate__slideInRight");
+      }, 500);
     }, 4000);
 
     return () => clearInterval(timer);
-  }, [isMdScreen]);
+  }, []);
 
   return (
     <section className="flex flex-col gap-10">
-      <div className="flex flex-col justify-center items-center gap-2">
-        <h1 className="text-[#40BBC3] font-semibold text-[32px] md:text-[40px] md:leading-[48px] leading-[28.8px] text-center">
-          {isMdScreen ? (
-            <>
-              What our customers <br /> are saying
-            </>
-          ) : (
-            <>From The People Who Use Rise</>
-          )}
+      <div className=" md:hidden flex flex-col justify-center items-center gap-2">
+        <h1 className="text-[#40BBC3]  font-semibold text-[32px]  leading-[28.8px] text-center">
+          What our customers <br /> are saying
         </h1>
         <p className="text-[#2D2D2D] text-center text-base md:text-lg">
-          {isMdScreen ? (
-            <>We serve over 80,000 amazing users.</>
-          ) : (
-            <>
-              Our mission at Risevest is to empower more people just like you{" "}
-              <br /> to achieve your personal financial goals.
-            </>
-          )}
+          We serve over 80,000 amazing users.
         </p>
       </div>
-      <div
-        className={`flex pb-6 md:pb-0 px-4 md:px-0 ${
-          isMdScreen ? "flex-col" : "md:flex-row"
-        } justify-between gap-6 animate__animated ${animationClass} hide-overflow`}
-      >
-        {isMdScreen ? (
-          <FeedbackCard
-            key={feedback[currentCardIndex].name}
-            item={feedback[currentCardIndex]}
-            isMdScreen={isMdScreen}
-          />
-        ) : (
-          feedback.map((item) => (
-            <FeedbackCard key={item.name} item={item} isMdScreen={isMdScreen} />
-          ))
-        )}
+      <div className="hidden md:flex flex-col justify-center items-center gap-2">
+        <h1 className="text-[#40BBC3]  font-semibold  md:text-[40px] md:leading-[48px] leading-[28.8px] text-center">
+          From The People Who Use Rise
+        </h1>
+        <p className="text-[#2D2D2D] text-center text-base md:text-lg">
+          Our mission at Risevest is to empower more people just like you <br />{" "}
+          to achieve your personal financial goals.
+        </p>
+      </div>
+
+      <div className={`md:hidden flex pb-6 px-4 flex-col justify-between gap-6 animate__animated ${animationClass} hide-overflow`}>
+        <FeedbackCard
+          key={feedback[currentCardIndex].name}
+          item={feedback[currentCardIndex]}
+        />
+      </div>
+
+      <div className={`hidden md:flex flex-row justify-between gap-6 animate__animated ${animationClass} hide-overflow`}>
+        {feedback.map((item) => (
+          <FeedbackCard key={item.name} item={item} />
+        ))}
       </div>
     </section>
   );
 };
-const FeedbackCard = ({ item, isMdScreen }: FeedbackCardProps) => (
+const FeedbackCard = ({ item }: FeedbackCardProps) => (
   <div className="card-div bg-[#ffffff] w-full border border-solid border-[#ecfefe] rounded-[10px] p-6 shadow-customLg flex flex-col justify-between md:h-[300px] gap-10">
     <p className="text-center md:text-left text-base text-[#4A5050] flex-grow">
       {item.review}
     </p>
     <div className="imgdiv flex flex-col md:flex-row items-center gap-4 mt-auto">
       <Image alt="profile" width={50} height={50} src={item.src} />
-      {isMdScreen ? (
-        <div className="flex flex-col items-center">
-          <p className="text-[#2D2D2D] font-semibold text-base">{item.name}</p>
-          <p className="text-[#4A5050] font-normal">{item.job}</p>
-        </div>
-      ) : (
+
+      <div className="flex flex-col  md:hidden items-center">
         <p className="text-[#2D2D2D] font-semibold text-base">{item.name}</p>
-      )}
+        <p className="text-[#4A5050] font-normal">{item.job}</p>
+      </div>
+
+      <p className="text-[#2D2D2D] hidden md:block font-semibold text-base">
+        {item.name}
+      </p>
     </div>
   </div>
 );

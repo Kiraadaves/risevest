@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import useMediaQuery from "./helpers/useMediaQuery";
 
 const Regulation = () => {
-  const isMdScreen = useMediaQuery();
   return (
     <section className="bg-white relative h-[331px] md:h-[372px] overflow-hidden">
       <div className="absolute inset-0">
@@ -43,25 +41,23 @@ const Regulation = () => {
             How we are Regulated
           </h1>
           <p className="text-[#4a5050] font-medium text-[13px] leading-6 md:text-base">
-            {isMdScreen ? (
-              <>
-                Rise is registered and regulated both in the US and in <br/> Nigeria.
-                The founder is registered as an investment <br/> adviser with the US
-                SEC. The Nigerian SEC regulates <br/> Rise&apos;s Nigerian investments
-                through a trusteeship <br/> agreement with ARM Trustees, who oversees <br/>
-                investments on behalf of the users. And a registered <br/> investment
-                subsidiary holds all users&apos; assets <br/> regulated in the US
-              </>
-            ) : (
-              <>
-                Rise is registered and regulated both in the US and in Nigeria.
-                Our <br />
-                team is made up of US registered investment advisers, our <br />{" "}
-                Nigerian users are covered by our SEC licensed trustees, ARM{" "}
-                <br /> Trustees and all our assets are held with regulated third
-                parties, in <br /> all relevant jurisdictions.
-              </>
-            )}
+            <span className="block md:hidden">
+              Rise is registered and regulated both in the US and in <br />
+              Nigeria. The founder is registered as an investment <br />
+              adviser with the US SEC. The Nigerian SEC regulates <br />
+              Rise's Nigerian investments through a trusteeship <br />
+              agreement with ARM Trustees, who oversees <br />
+              investments on behalf of the users. And a registered <br />
+              investment subsidiary holds all users' assets <br />
+              regulated in the US.
+            </span>
+            <span className="hidden md:block">
+              Rise is registered and regulated both in the US and in Nigeria.
+              Our team is made up of US registered investment advisers, our
+              Nigerian users are covered by our SEC licensed trustees, ARM
+              Trustees and all our assets are held with regulated third parties,
+              in all relevant jurisdictions.
+            </span>
           </p>
         </div>
       </div>

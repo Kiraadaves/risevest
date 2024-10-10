@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import useMediaQuery from "./helpers/useMediaQuery";
 
 const desktopInvest = [
   {
@@ -59,36 +58,59 @@ const mobileInvest = [
 ];
 
 const Invest = () => {
-  const isMdScreen = useMediaQuery();
-  const dataToRender = isMdScreen ? mobileInvest : desktopInvest;
   return (
     <section className="md:px-20">
-      {dataToRender.map((assets, index) => (
-        <div
-          key={index}
-          className={`flex flex-col items-center md:flex-row md:justify-between md:gap-40 ${
-            index % 2 === 0 ? "md:flex-row-reverse" : ""
-          }`}
-        >
-          <Image
-            alt={assets.img}
-            width={500}
-            height={500}
-            priority
-            src={assets.img}
-            className=""
-          />{" "}
-          <div className="content px-8 md:px-0">
-            <h1 className={`text-[#2D2D2D] text-xl md:text-[32px] font-semibold ${isMdScreen ? " text-center" : ""}  `}>
-              {assets.heading}
-            </h1>
-            <p className={`text-[#4A5050] text-base mt-4 text-balance md:font-medium ${isMdScreen ? " text-center" : ""}  `}>
-              {assets.ptext}
-            </p>
-            {!isMdScreen && <a href="#">{assets.link}</a>}
+      <div className="hidden md:block">
+        {desktopInvest.map((assets, index) => (
+          <div
+            key={index}
+            className={`flex flex-col items-center md:flex-row md:justify-between md:gap-40 ${
+              index % 2 === 0 ? "md:flex-row-reverse" : ""
+            }`}
+          >
+            <Image
+              alt={assets.img}
+              width={500}
+              height={500}
+              priority
+              src={assets.img}
+              className=""
+            />
+            <div className="content px-8 md:px-0 text-center md:text-left">
+              <h1 className="text-[#2D2D2D] text-xl md:text-[32px] font-semibold">
+                {assets.heading}
+              </h1>
+              <p className="text-[#4A5050] text-base mt-4 md:font-medium">
+                {assets.ptext}
+              </p>
+              <a href="#" className="hidden md:block">
+                {assets.link}
+              </a>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="block md:hidden">
+        {mobileInvest.map((assets, index) => (
+          <div key={index} className="flex flex-col items-center gap-6">
+            <Image
+              alt={assets.img}
+              width={500}
+              height={500}
+              priority
+              src={assets.img}
+              className=""
+            />
+            <div className="content px-8 text-center">
+              <h1 className="text-[#2D2D2D] text-xl font-semibold">
+                {assets.heading}
+              </h1>
+              <p className="text-[#4A5050] text-base mt-4">{assets.ptext}</p>
+              <a href="#">{assets.link}</a>
+            </div>
+          </div>
+        ))}
+      </div>{" "}
     </section>
   );
 };
