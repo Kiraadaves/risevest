@@ -40,7 +40,7 @@ const footerElements = [
 
 const Footer = () => {
   return (
-    <section>
+    <section className="md:px-24">
       <footer className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
         {footerElements.map((section) => (
           <div key={section.title} className="flex flex-col gap-8">
@@ -54,7 +54,7 @@ const Footer = () => {
               </h4>
             )}
 
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-[15px]">
               {section.links.map((link) => (
                 <Link key={link} href={`#`} className={`${dmSans.className}`}>
                   {link}

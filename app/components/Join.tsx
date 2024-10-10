@@ -9,7 +9,7 @@ const Join = () => {
   const isMdScreen = useMediaQuery();
 
   return (
-    <section className="flex flex-col gap-12">
+    <section className="flex flex-col gap-12 md:px-20">
       <div
         className={`flex w-full ${
           isMdScreen
@@ -101,7 +101,9 @@ const Join = () => {
           className={`md:h-[399.58px] md:w-[208.88px] bg-[#ffffff] rounded-t-[30px] pt-4 px-4`}
         >
           <Image
-            src={isMdScreen ? "/images/phone-mob.png" : "/images/phone-desk.png"}
+            src={
+              isMdScreen ? "/images/phone-mob.png" : "/images/phone-desk.png"
+            }
             alt="phone"
             width={200}
             height={200}

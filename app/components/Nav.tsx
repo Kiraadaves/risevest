@@ -36,7 +36,7 @@ const Nav = () => {
   const isMdScreen = useMediaQuery();
 
   return (
-    <header className="flex justify-between">
+    <header className="flex justify-between md:px-24 px-6">
       <div className="animate__animated animate__slideInLeft">
         <Logo />
       </div>

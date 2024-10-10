@@ -107,13 +107,12 @@ const Feedback = () => {
     </section>
   );
 };
-
 const FeedbackCard = ({ item, isMdScreen }: FeedbackCardProps) => (
-  <div className="card-div bg-[#ffffff] w-full md:w-[409px] border border-solid border-[#ecfefe] rounded-[10px] p-6 shadow-customLg flex flex-col md:gap-20 gap-10">
-    <p className="text-center md:text-left text-base text-[#4A5050]">
+  <div className="card-div bg-[#ffffff] w-full border border-solid border-[#ecfefe] rounded-[10px] p-6 shadow-customLg flex flex-col justify-between md:h-[300px] gap-10">
+    <p className="text-center md:text-left text-base text-[#4A5050] flex-grow">
       {item.review}
     </p>
-    <div className="flex flex-col md:flex-row items-center gap-4">
+    <div className="imgdiv flex flex-col md:flex-row items-center gap-4 mt-auto">
       <Image alt="profile" width={50} height={50} src={item.src} />
       {isMdScreen ? (
         <div className="flex flex-col items-center">
