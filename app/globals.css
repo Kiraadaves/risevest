@@ -25,3 +25,32 @@ body {
     text-wrap: balance;
   }
 }
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #07969e;
+  border-radius: 50%;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link:active::after {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    display: flex; align-items: flex-start; 
+  }
+  
+  .nav-link::after {
+    bottom: -4px; }
+}
