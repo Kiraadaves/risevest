@@ -34,7 +34,7 @@ const Regulation = () => {
           src="/images/eclipse-209.png"
           width={500}
           height={500}
-          className="absolute md:top-[161px] md:left-[944px] top-[164px] left-[324px]"
+          className="absolute md:top-[130px] md:left-[1020px] top-[164px] left-[324px]"
         />
       </div>
       <div className="relative z-10 h-full flex items-center justify-center">

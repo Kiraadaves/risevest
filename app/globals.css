@@ -63,3 +63,7 @@ body {
     bottom: -10px;
   }
 }
+
+.hide-overflow {
+  overflow: hidden;
+}
