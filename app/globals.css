@@ -26,7 +26,15 @@ body {
   }
 }
 
-.nav-link::after {
+.nav-link {
+  display: inline-block;
+}
+
+.nav-text {
+  display: inline-block;
+}
+
+.nav-text::after {
   content: "";
   position: absolute;
   width: 8px;
@@ -40,17 +48,18 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-.nav-link:hover::after,
-.nav-link:focus::after,
-.nav-link:active::after {
+.nav-link:hover .nav-text::after,
+.nav-link:focus .nav-text::after,
+.nav-link:active .nav-text::after {
   opacity: 1;
 }
 
 @media (max-width: 768px) {
   .nav-link {
-    display: flex; align-items: flex-start; 
+    display: flex;
+    align-items: flex-start;
   }
-  
-  .nav-link::after {
-    bottom: -4px; }
+  .nav-text::after {
+    bottom: -10px;
+  }
 }
