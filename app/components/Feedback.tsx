@@ -49,7 +49,7 @@ const Feedback = () => {
         setCurrentCardIndex((prevIndex) => (prevIndex + 1) % feedback.length);
         setAnimationClass("animate__slideInRight");
       }, 500);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
