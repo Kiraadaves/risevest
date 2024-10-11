@@ -63,6 +63,7 @@ const Invest = () => {
       <div className="hidden md:block">
         {desktopInvest.map((assets, index) => (
           <div
+            data-aos="zoom-in"
             key={index}
             className={`flex flex-col items-center md:flex-row md:justify-between md:gap-40 ${
               index % 2 === 0 ? "md:flex-row-reverse" : ""

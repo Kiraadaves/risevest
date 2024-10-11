@@ -4,7 +4,10 @@ import React from "react";
 
 const Regulation = () => {
   return (
-    <section className="bg-white relative h-[331px] md:h-[372px] overflow-hidden">
+    <section
+      data-aos="zoom-in"
+      className="bg-white relative h-[331px] md:h-[372px] overflow-hidden"
+    >
       <div className="absolute inset-0">
         <Image
           alt="eclipse top left"
@@ -52,9 +55,12 @@ const Regulation = () => {
               regulated in the US.
             </span>
             <span className="hidden md:block">
-              Rise is registered and regulated both in the US and in Nigeria.<br />
-              Our team is made up of US registered investment advisers, our <br />
-              Nigerian users are covered by our SEC licensed trustees, ARM <br />
+              Rise is registered and regulated both in the US and in Nigeria.
+              <br />
+              Our team is made up of US registered investment advisers, our{" "}
+              <br />
+              Nigerian users are covered by our SEC licensed trustees, ARM{" "}
+              <br />
               Trustees and all our assets are held with regulated third parties,
               in <br /> all relevant jurisdictions.
             </span>

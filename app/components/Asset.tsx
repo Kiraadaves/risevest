@@ -24,7 +24,10 @@ const assets = [
 const Asset = () => {
   return (
     <section className="md:px-24 px-8 flex flex-col gap-12">
-      <div className="flex flex-col justify-center items-center gap-3">
+      <div
+        data-aos="zoom-in"
+        className="flex flex-col justify-center items-center gap-3"
+      >
         <h1 className="text-[#2D2D2D] leading-[28.8px] md:leading-[48px] md:text-[40px]  text-[32px] font-semibold text-center">
           Asset Classes
         </h1>
@@ -36,6 +39,7 @@ const Asset = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
         {assets.map((asset) => (
           <div
+            data-aos="zoom-in"
             key={asset.name}
             className=" main relative border-2 border-solid border-[#919FB533] rounded-[5px] flex flex-col justify-between gap-20 pb-6"
           >
@@ -73,7 +77,7 @@ const Asset = () => {
         ))}
       </div>
       <div className="hidden md:flex justify-between items-center w-full max-w-7xl mx-auto px-8">
-        <div className="flex-shrink-0">
+        <div data-aos="flip-right" className="flex-shrink-0">
           <Image
             alt="asset-image"
             width={500}

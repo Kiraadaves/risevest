@@ -5,17 +5,17 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 const Hero = () => {
   return (
     <section className="md:px-24 px-8  min-h-screen overflow-hidden flex flex-col gap-8">
-      <div className="relative w-full flex flex-col gap-12 md:gap-0 md:flex-row md:justify-between items-center pr-16">
-        <div className="absolute z-30  top-20 left-60 w-[10px] h-[10px] bg-[#40BBC3] rounded-full opacity-30 md:opacity-100  " />
-        <div className="absolute z-30  top-8 right-10 w-8 h-8 bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
-        <div className="absolute z-30  top-12 left-20 w-[56px] h-[56px] bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
-        <div className="absolute z-30  bottom-20 left-20 w-[56px] h-[56px] bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
-        <div className="absolute  z-30 bottom-16 right-16 w-8 h-8 bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
-        <div className="absolute  z-30 bottom-1/4 right-5 w-[56px] h-[56px] bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
+      <div className="relative w-full flex flex-col gap-12 md:gap-0 md:flex-row md:justify-between items-center md:pr-16">
+        <div data-aos="zoom-in-left" className="absolute z-30  top-20 left-60 w-[10px] h-[10px] bg-[#40BBC3] rounded-full opacity-30 md:opacity-100  " />
+        <div data-aos="zoom-in-right" className="absolute z-30  top-8 right-10 w-8 h-8 bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
+        <div data-aos="zoom-in-left" className="absolute z-30  top-12 left-20 w-[56px] h-[56px] bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
+        <div data-aos="zoom-in-left" className="absolute z-30  bottom-20 left-20 w-[56px] h-[56px] bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
+        <div data-aos="zoom-in-right" className="absolute  z-30 bottom-16 right-16 w-8 h-8 bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
+        <div data-aos="zoom-in-right" className="absolute  z-30 bottom-1/4 right-5 w-[56px] h-[56px] bg-[#A0DDE2] rounded-full opacity-30 md:opacity-100  " />
 
         {/**flex div */}
 
-        <div className="flex flex-col gap-6 z-40">
+        <div data-aos="slide-in-left" className="flex flex-col gap-6 z-40">
           <h1 className="text-[#07969e] font-semibold text-[40px] leading-[36px] md:text-[56px] md:leading-[60px] text-center md:text-left">
             Dollar investments <br /> that help you grow
           </h1>
@@ -49,7 +49,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="z-40">
+        <div data-aos="zoom-in-right" className="z-40">
           <Image
             alt="eclipse195"
             src="/images/phonemob.png"

@@ -55,7 +55,7 @@ const Feedback = () => {
   }, []);
 
   return (
-    <section className="flex flex-col gap-10">
+    <section data-aos="zoom-in" className="flex flex-col gap-10">
       <div className=" md:hidden flex flex-col justify-center items-center gap-4">
         <h1 className="text-[#40BBC3]  font-semibold text-[32px]  leading-[28.8px] text-center">
           What our customers <br /> are saying
@@ -74,14 +74,18 @@ const Feedback = () => {
         </p>
       </div>
 
-      <div className={`md:hidden flex pb-6 px-4 flex-col justify-between gap-6 animate__animated ${animationClass} hide-overflow`}>
+      <div
+        className={`md:hidden flex pb-6 px-4 flex-col justify-between gap-6 animate__animated ${animationClass} hide-overflow`}
+      >
         <FeedbackCard
           key={feedback[currentCardIndex].name}
           item={feedback[currentCardIndex]}
         />
       </div>
 
-      <div className={`hidden md:flex flex-row justify-between gap-6 animate__animated ${animationClass} hide-overflow`}>
+      <div
+        className={`hidden md:flex flex-row justify-between gap-6 animate__animated ${animationClass} hide-overflow`}
+      >
         {feedback.map((item) => (
           <FeedbackCard key={item.name} item={item} />
         ))}
