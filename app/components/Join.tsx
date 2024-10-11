@@ -5,7 +5,7 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const Join = () => {
   return (
-    <section className="flex flex-col gap-12 md:px-20">
+    <section className="flex flex-col gap-12 md:px-20 px-8">
       <div
         className={`flex w-full flex-col items-center gap-8 md:flex-row md:justify-between md:gap-0`}
       >

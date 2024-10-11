@@ -11,28 +11,28 @@ const Regulation = () => {
           src="/images/eclipse-211.png"
           width={500}
           height={500}
-          className="absolute md:top-[-93px] md:left-[-153px] top-[7px] left-[-173px]"
+          className="absolute md:top-[-73px] md:left-[-129px] top-[7px] left-[-73px]"
         />
         <Image
           alt="eclipse bottom left"
           src="/images/eclipse-210.png"
           width={500}
           height={500}
-          className="absolute md:left-[-102px] md:top-[159px] top-[159px] left-[-262px] "
+          className="absolute md:left-[-72px] md:top-[29px] top-[59px] left-[-62px] "
         />
         <Image
           alt="eclipse top right"
           src="/images/eclipse-206.png"
           width={500}
           height={500}
-          className="absolute md:top-[-140px] md:left-[1046px] top-[-32px] left-[316px]"
+          className="absolute md:top-[-140px] md:left-[1046px] top-[-22px] left-[116px]"
         />
         <Image
           alt="eclipse bottom right"
           src="/images/eclipse-209.png"
           width={500}
           height={500}
-          className="absolute md:top-[130px] md:left-[1020px] top-[164px] left-[324px]"
+          className="absolute md:top-[130px] md:left-[1020px] top-[64px] left-[180px]"
         />
       </div>
       <div className="relative z-10 h-full flex items-center justify-center">
@@ -52,11 +52,11 @@ const Regulation = () => {
               regulated in the US.
             </span>
             <span className="hidden md:block">
-              Rise is registered and regulated both in the US and in Nigeria.
-              Our team is made up of US registered investment advisers, our
-              Nigerian users are covered by our SEC licensed trustees, ARM
+              Rise is registered and regulated both in the US and in Nigeria.<br />
+              Our team is made up of US registered investment advisers, our <br />
+              Nigerian users are covered by our SEC licensed trustees, ARM <br />
               Trustees and all our assets are held with regulated third parties,
-              in all relevant jurisdictions.
+              in <br /> all relevant jurisdictions.
             </span>
           </p>
         </div>

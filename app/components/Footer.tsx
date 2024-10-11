@@ -40,7 +40,7 @@ const footerElements = [
 
 const Footer = () => {
   return (
-    <section className="md:px-24 px-12">
+    <section className="md:px-24 px-8">
       <footer className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
         {footerElements.map((section) => (
           <div key={section.title} className="flex flex-col gap-8">

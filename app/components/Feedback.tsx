@@ -56,7 +56,7 @@ const Feedback = () => {
 
   return (
     <section className="flex flex-col gap-10">
-      <div className=" md:hidden flex flex-col justify-center items-center gap-2">
+      <div className=" md:hidden flex flex-col justify-center items-center gap-4">
         <h1 className="text-[#40BBC3]  font-semibold text-[32px]  leading-[28.8px] text-center">
           What our customers <br /> are saying
         </h1>
@@ -90,7 +90,7 @@ const Feedback = () => {
   );
 };
 const FeedbackCard = ({ item }: FeedbackCardProps) => (
-  <div className="card-div bg-[#ffffff] w-full border border-solid border-[#ecfefe] rounded-[10px] p-6 shadow-customLg flex flex-col justify-between md:h-[300px] gap-10">
+  <div className="card-div bg-[#ffffff] w-full border-x border-b border-solid border-[#ecfefe] rounded-[10px] p-6 shadow-customLg flex flex-col justify-between md:h-[300px] gap-10">
     <p className="text-center md:text-left text-base text-[#4A5050] flex-grow">
       {item.review}
     </p>
