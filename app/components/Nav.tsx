@@ -34,7 +34,7 @@ const Nav = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <header className="flex justify-between md:px-24 px-6">
+    <header className="flex justify-between md:px-24 px-6 z-[9999]">
       <div className="animate__animated animate__slideInLeft">
         <Logo />
       </div>
@@ -55,7 +55,7 @@ const Nav = () => {
         </div>
 
         {mobileNavOpen && (
-          <div className="animate__animated animate__slideInRight fixed top-0 right-0 w-64 h-auto max-h-[80vh] bg-white shadow-lg z-50 overflow-y-auto">
+          <div className="animate__animated animate__slideInRight fixed top-0 right-0 w-64 h-auto max-h-[80vh] bg-white shadow-lg  overflow-y-auto">
             <div className="flex justify-end p-4">
               <button
                 onClick={() => setMobileNavOpen(false)}

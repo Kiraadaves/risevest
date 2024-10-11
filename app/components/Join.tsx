@@ -73,19 +73,23 @@ const Join = () => {
             Dollar investments that help you grow.
           </p>
           <div className="flex gap-6">
-            <button className="bg-[#2d2d2d] flex items-center justify-center gap-2 px-1 py-2 text-[#ffffff] font-semibold text-base rounded-[5px] w-[144px] ">
+            <button className=" flex items-center bg-[#2d2d2d] text-white px-4 py-3 rounded-lg hover:bg-[#07969e] transition-colors duration-300 gap-2">
               <FaApple className="w-8 h-8" />
-              <p className="text-left flex flex-col font-normal">
-                <span className="text-[10px]"> Download on the</span>
-                <span className="text-[13px]">App Store</span>
-              </p>
+              <div className="flex flex-col items-start">
+                <span className="text-[10px] font-light">Download on the</span>
+                <span className="text-[13px] font-semibold leading-tight">
+                  App Store
+                </span>
+              </div>
             </button>
-            <button className="bg-[#2d2d2d] flex items-center justify-center gap-2 px-1 py-2 text-[#ffffff] font-semibold text-base rounded-[5px] w-[144px] ">
+            <button className="flex items-center bg-[#2d2d2d] text-white px-4 py-3 rounded-lg hover:bg-[#07969e] transition-colors duration-300 gap-2">
               <FaGooglePlay className="w-6 h-6" />
-              <p className="text-left flex flex-col font-normal">
-                <span className="text-[10px]"> Download on the</span>
-                <span className="text-[13px]">App Store</span>
-              </p>
+              <div className="flex flex-col items-start">
+                <span className="text-[10px] font-light">Download on the</span>
+                <span className="text-[13px] font-semibold leading-tight">
+                  Google Play
+                </span>
+              </div>
             </button>
           </div>
         </div>
