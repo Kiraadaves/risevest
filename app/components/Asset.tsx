@@ -46,7 +46,7 @@ const Asset = () => {
                 asset.name === "Fixed Income" && "bg-[#ECFEFE]"
               }`}
             ></div>
-            <div className="bg-[#ffffff] rounded-full p-4 w-[15%] md:w-28 absolute left-1/2 transform -translate-x-1/2 top-36">
+            <div className="bg-[#ffffff] rounded-full p-4 w-28 md:w-28 absolute left-1/2 transform -translate-x-1/2 top-36">
               <Image alt={asset.img} height={100} width={100} src={asset.img} />
             </div>
             <div className="px-8">
@@ -71,6 +71,34 @@ const Asset = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="hidden md:flex justify-between items-center w-full max-w-7xl mx-auto px-8">
+        <div className="flex-shrink-0">
+          <Image
+            alt="asset-image"
+            width={500}
+            height={500}
+            src="/images/assetimg.png"
+          />
+        </div>
+        <div className="text-div flex flex-col justify-center gap-8 ml-auto max-w-lg">
+          <h2 className="font-medium text-lg leading-[30px] text-[#2d2d2d]">
+            The Rise App
+          </h2>
+          <h1 className="text-[40px] text-[#2d2d2d] font-semibold leading-[48px]">
+            Save for your <span className="text-indigo-500">future</span>
+          </h1>
+          <p className="text-base text-balance text-[#2d2d2d] font-normal">
+            With Rise, you achieve your financial goals faster. Save for school,
+            your home, vacations, your children’s future and more.
+          </p>
+
+          <div className="flex">
+            <button className=" py-4 px-[10px] w-[160px] text-base font-bold text-[#ffffff] rounded-[5px] bg-[#07969E]">
+              Start Saving
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
