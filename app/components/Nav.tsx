@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import "animate.css";
+import React, { useState } from "react";
+
 import { IoMdClose } from "react-icons/io";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
@@ -19,7 +19,7 @@ const navigation = [
 const NavLink = ({ item }: { item: (typeof navigation)[0] }) => (
   <Link
     href={item.href}
-    className="nav-link text-[#07969E] hover:font-bold focus:font-bold text-base"
+    className="nav-link text-[#07969E] hover:font-bold focus:font-bold text-base transition-all duration-300"
   >
     <span className="nav-text relative">
       {item.name}

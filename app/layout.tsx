@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "animate.css";
 import { dmSans } from "./fonts/fonts";
 import ClientLayout from "./clientLayout";
 

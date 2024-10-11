@@ -94,6 +94,7 @@ const Join = () => {
           </div>
         </div>
         <div
+          data-aos="flip-left"
           className={`md:block hidden h-[399.58px] w-[208.88px] bg-[#ffffff] rounded-t-[30px] pt-4 px-4`}
         >
           <Image
@@ -107,6 +108,7 @@ const Join = () => {
           />
         </div>
         <div
+          data-aos="flip-left"
           className={`block md:hidden  bg-[#ffffff] rounded-t-[30px] pt-4 px-4`}
         >
           <Image

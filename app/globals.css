@@ -76,6 +76,14 @@ body {
   overflow: hidden;
 }
 
+.animate__animated.animate__slideInRight {
+  --animate-duration: 3s;
+}
+
+.animate__animated.animate__slideInLeft {
+  --animate-duration: 3s;
+}
+
 /*@keyframes float {
   0% {
     transform: translate(0, 0);

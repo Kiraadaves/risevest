@@ -32,7 +32,7 @@ const Asset = () => {
           Asset Classes
         </h1>
         <p className="text-[#2D2D2D] text-center text-lg md:text-base font-normal leading-6">
-          It's your money, <br className="md:hidden block" /> choose where you
+          It&lsquo;s your money, <br className="md:hidden block" /> choose where you
           invest it
         </p>
       </div>
@@ -41,7 +41,7 @@ const Asset = () => {
           <div
             data-aos="zoom-in"
             key={asset.name}
-            className=" main relative border-2 border-solid border-[#919FB533] rounded-[5px] flex flex-col justify-between gap-20 pb-6"
+            className="main relative border-2 border-solid border-[#919FB533] rounded-[5px] flex flex-col justify-between gap-20 pb-6 transition-all duration-300 hover:-translate-y-8 hover:shadow-lg "
           >
             <div
               className={`color h-[200px] ${
@@ -68,10 +68,10 @@ const Asset = () => {
               </p>
             </div>
             <div className="text-[#07969E] flex justify-center items-center gap-2 mt-auto">
-              <Link href={`#`} className="">
+              <Link href={`#`} className="flex gap-2 items-center group">
                 Learn how Real Estate works
+                <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-2 text-[#55aeb3]" />
               </Link>
-              <FaArrowRight />
             </div>
           </div>
         ))}

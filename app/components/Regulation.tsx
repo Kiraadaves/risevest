@@ -9,35 +9,40 @@ const Regulation = () => {
       className="bg-white relative h-[331px] md:h-[372px] overflow-hidden"
     >
       <div className="absolute inset-0">
+        {/* Top Left */}
         <Image
           alt="eclipse top left"
           src="/images/eclipse-211.png"
           width={500}
           height={500}
-          className="absolute md:top-[-73px] md:left-[-129px] top-[7px] left-[-73px]"
+          className="absolute md:top-[-150px] md:left-[-200px] top-[0px] left-[-100px]" // Updated positions
         />
+        {/* Bottom Left */}
         <Image
           alt="eclipse bottom left"
           src="/images/eclipse-210.png"
           width={500}
           height={500}
-          className="absolute md:left-[-72px] md:top-[29px] top-[59px] left-[-62px] "
+          className="absolute md:bottom-[-100px] md:left-[-150px] bottom-[20px] left-[-50px]" // Updated positions
         />
+        {/* Top Right  */}
         <Image
           alt="eclipse top right"
           src="/images/eclipse-206.png"
           width={500}
           height={500}
-          className="absolute md:top-[-140px] md:left-[1046px] top-[-22px] left-[116px]"
+          className="absolute md:top-[-200px] md:right-[-120px] top-[-30px] right-[-40px]" // Updated positions
         />
+        {/* Right */}
         <Image
           alt="eclipse bottom right"
           src="/images/eclipse-209.png"
           width={500}
           height={500}
-          className="absolute md:top-[130px] md:left-[1020px] top-[64px] left-[180px]"
+          className="absolute md:bottom-[-150px] md:right-[-100px] bottom-[-30px] right-[-30px]" // Updated positions
         />
       </div>
+
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="text-center px-4">
           <h1 className="font-semibold text-3xl md:text-[40px] text-[32px] text-[#2D2D2D] mb-4">
@@ -48,10 +53,10 @@ const Regulation = () => {
               Rise is registered and regulated both in the US and in <br />
               Nigeria. The founder is registered as an investment <br />
               adviser with the US SEC. The Nigerian SEC regulates <br />
-              Rise's Nigerian investments through a trusteeship <br />
+              Rise&lsquo;s Nigerian investments through a trusteeship <br />
               agreement with ARM Trustees, who oversees <br />
               investments on behalf of the users. And a registered <br />
-              investment subsidiary holds all users' assets <br />
+              investment subsidiary holds all users&lsquo; assets <br />
               regulated in the US.
             </span>
             <span className="hidden md:block">
