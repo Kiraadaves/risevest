@@ -53,7 +53,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .nav-link:hover .nav-text::after,
@@ -76,4 +76,18 @@ body {
   overflow: hidden;
 }
 
+/*@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}*/
