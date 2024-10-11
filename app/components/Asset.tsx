@@ -23,7 +23,7 @@ const assets = [
 
 const Asset = () => {
   return (
-    <section className="md:px-24 px-8 flex flex-col gap-12">
+    <section className="md:px-24 px-6 flex flex-col gap-12">
       <div
         data-aos="zoom-in"
         className="flex flex-col justify-center items-center gap-3"

@@ -18,7 +18,7 @@ const footerElements = [
   },
   {
     title: "Explore",
-    links: ["Investment Club", "Blog"],
+    links: ["Investment Club", "Blog", "Newsletter", "Instagram", "Twitter"],
     hasIcon: true,
   },
   {
@@ -40,7 +40,7 @@ const footerElements = [
 
 const Footer = () => {
   return (
-    <section className="md:px-24 px-8">
+    <section className="md:px-24 px-6">
       <footer className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6">
         {footerElements.map((section) => (
           <div key={section.title} className="flex flex-col gap-8">
@@ -55,14 +55,43 @@ const Footer = () => {
             )}
 
             <ul className="flex flex-col gap-[15px]">
-              {section.links.map((link) => (
-                <Link key={link} href={`#`} className={`${dmSans.className}`}>
-                  {link}
-                  {section.hasIcon && (
-                    <MdArrowOutward className="inline-block ml-1 mb-1 w-4 h-5" />
-                  )}
-                </Link>
-              ))}
+              {section.links.map((link, index) => {
+                if (section.title === "Explore") {
+                  // .... control visibility of certain links
+                  if (index > 1) {
+                    // ... hidden on large screens
+                    return (
+                      <Link
+                        key={link}
+                        href={`#`}
+                        className={`${dmSans.className} md:hidden`}
+                      >
+                        {link}
+                        {section.hasIcon && (
+                          <MdArrowOutward className="inline-block ml-1 mb-1 w-4 h-5" />
+                        )}
+                      </Link>
+                    );
+                  }
+                }
+
+                return (
+                  <Link
+                    key={link}
+                    href={`#`}
+                    className={`${dmSans.className} ${
+                      section.title === "Explore" && index > 1
+                        ? "md:hidden"
+                        : ""
+                    }`}
+                  >
+                    {link}
+                    {section.hasIcon && (
+                      <MdArrowOutward className="inline-block ml-1 mb-1 w-4 h-5" />
+                    )}
+                  </Link>
+                );
+              })}
             </ul>
           </div>
         ))}

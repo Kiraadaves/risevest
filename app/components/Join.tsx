@@ -5,7 +5,7 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const Join = () => {
   return (
-    <section data-aos="zoom-in" className="flex flex-col gap-12 md:px-20 px-8">
+    <section data-aos="zoom-in" className="flex flex-col gap-12 md:px-20 px-6">
       <div
         className={`flex w-full flex-col items-center gap-8 md:flex-row md:justify-between md:gap-0`}
       >
@@ -72,9 +72,9 @@ const Join = () => {
           >
             Dollar investments that help you grow.
           </p>
-          <div className="flex gap-6">
-            <button className=" flex items-center bg-[#2d2d2d] text-white px-4 py-3 rounded-lg hover:bg-[#07969e] transition-colors duration-300 gap-2">
-              <FaApple className="w-8 h-8" />
+          <div className="flex md:gap-6 gap-2">
+            <button className=" flex items-center bg-[#2d2d2d] text-white md:px-4 py-3 w-[144px] pl-3 rounded-lg hover:bg-[#07969e] transition-colors duration-300 gap-2">
+              <FaApple className="w-6 h-6" />
               <div className="flex flex-col items-start">
                 <span className="text-[10px] font-light">Download on the</span>
                 <span className="text-[13px] font-semibold leading-tight">
@@ -82,8 +82,8 @@ const Join = () => {
                 </span>
               </div>
             </button>
-            <button className="flex items-center bg-[#2d2d2d] text-white px-4 py-3 rounded-lg hover:bg-[#07969e] transition-colors duration-300 gap-2">
-              <FaGooglePlay className="w-6 h-6" />
+            <button className="flex items-center bg-[#2d2d2d] text-white md:px-4 py-3 w-[144px] pl-3  rounded-lg hover:bg-[#07969e] transition-colors duration-300 gap-2">
+              <FaGooglePlay className="w-5 h-5" />
               <div className="flex flex-col items-start">
                 <span className="text-[10px] font-light">Download on the</span>
                 <span className="text-[13px] font-semibold leading-tight">
