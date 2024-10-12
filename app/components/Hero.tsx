@@ -87,6 +87,7 @@ const Hero = () => {
             width={300}
             height={300}
             className="md:hidden block"
+            data-aos="flip-up"
           />
           <Image
             alt="Rise app interface on desktop"
@@ -94,6 +95,7 @@ const Hero = () => {
             width={300}
             height={300}
             className="hidden md:block"
+            data-aos="flip-up"
           />
         </div>
       </div>
