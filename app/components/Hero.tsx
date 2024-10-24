@@ -109,11 +109,11 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-6 md:flex-row md:justify-center">
+      <div className="flex flex-col gap-6 md:flex-row md:justify-center z-40">
         <p className="md:hidden block text-[#7B8DA8] font-bold text-lg">
           We are supported by
         </p>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center bg-white">
           <Image
             alt="ARM logo"
             src="/images/arm.png"
