@@ -48,8 +48,18 @@ const Hero = () => {
 
       <div className="relative w-full flex flex-col gap-12 md:gap-0 md:flex-row md:justify-between items-center md:pr-16">
         <div className="flex flex-col gap-6 z-40">
-          <h1 className="text-[#07969e] font-semibold text-[32px] leading-[36px] md:text-[56px] md:leading-[60px] text-center md:text-left">
+          <h1 className="text-[#07969e] font-semibold text-[32px] leading-[36px] md:text-[56px] md:leading-[60px] text-center md:text-left relative">
             Dollar investments <br /> that help you grow
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 10 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="inline mt-[-10px] md:mt-[-20px] ml-1"
+            >
+              <circle cx="5" cy="5" r="5" fill="#07969e" />
+            </svg>
           </h1>
           <p className="hidden md:block text-[#4a5050] text-base font-medium">
             We put your money in high quality assets that help <br /> you build
